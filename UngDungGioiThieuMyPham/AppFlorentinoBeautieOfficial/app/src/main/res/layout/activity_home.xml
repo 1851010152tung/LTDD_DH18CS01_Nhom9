@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/main_background"
+    tools:context=".Home">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/coral_pink"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:expandedTitleTextAppearance="@style/expandedBarTextStyle"
+            app:title="Home">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/home_coral_shape"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:fontFamily="@font/stoke"
+                        android:paddingLeft="10dp"
+                        android:text="Choose"
+                        android:textColor="@color/main_background"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/stoke"
+                        android:paddingLeft="10dp"
+                        android:text="the brand you love"
+                        android:textColor="@color/main_background"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/home_search"
+                            android:layout_width="350dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/home_search_bg"
+                            android:drawableStart="@drawable/home_ic_search"
+                            android:drawablePadding="15dp"
+                            android:elevation="-10dp"
+                            android:ems="10"
+                            android:fontFamily="@font/noto_sans"
+                            android:hint="What are you looking for?"
+                            android:inputType="textPersonName"
+                            android:paddingStart="20dp"
+                            android:textColor="#CE615B5B"
+                            android:textColorHint="#90969A"></EditText>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="-150dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/logo_florentino_cream" />
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/coral_pink"
+                app:titleTextColor="@color/main_background">
+
+                <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/ic_nav_drawer"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/home_ic_drawer_nav_menu"/>
+                -->
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/stoke"
+                android:paddingTop="30dp"
+                android:text="Categories"
+                android:textColor="@color/greendark_bot_nav"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="800dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/makeup"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/categories_bg"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_cate_makeup"
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/categories_ic_makeup" />
+
+                        <TextView
+                            android:id="@+id/tv_cate_makeup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-13dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="Makeup"
+                            android:textColor="#A3615F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/haircare"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/categories_bg"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_cate_haircare"
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/categories_ic_haircare" />
+
+                        <TextView
+                            android:id="@+id/tv_cate_haircare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-13dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="Haircare"
+                            android:textColor="#A3615F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/skincare"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/categories_bg"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_cate_skincare"
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/categories_ic_skincare" />
+
+                        <TextView
+                            android:id="@+id/tv_cate_skincare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-13dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="Skincare"
+                            android:textColor="#A3615F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/others"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/categories_bg"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_cate_others"
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/categories_ic_others" />
+
+                        <TextView
+                            android:id="@+id/tv_cate_others"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-13dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="Others"
+                            android:textColor="#A3615F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/otherss"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/categories_bg"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_cate_otherss"
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/categories_ic_makeup" />
+
+                        <TextView
+                            android:id="@+id/tv_cate_otherss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-13dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="Makeup"
+                            android:textColor="#484C3D"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/othersss"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/categories_bg"
+                        android:elevation="2dp"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/img_cate_othersss"
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/categories_ic_makeup" />
+
+                        <TextView
+                            android:id="@+id/tv_cate_othersss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-13dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="Makeup"
+                            android:textColor="#484C3D"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/otherssss"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/categories_bg"
+                        android:elevation="2dp"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/img_cate_otherssss"
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/categories_ic_makeup" />
+
+                        <TextView
+                            android:id="@+id/tv_cate_otherssss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-13dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:text="Makeup"
+                            android:textColor="#484C3D"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_newProductMain"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/stoke"
+                        android:paddingTop="30dp"
+                        android:text="New Product   "
+                        android:textColor="@color/greendark_bot_nav"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:fontFamily="@font/noto_sans"
+                        android:paddingTop="30dp"
+                        android:text="More"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/product_more_ic_baseline_navigate_next_24" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-15dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/product_more_ic_baseline_navigate_next_24" />
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/new_product_recycler"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:paddingTop="15dp" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_flashSaleMain"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="29dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/flashsales_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/stoke"
+                        android:paddingTop="30dp"
+                        android:padding="10dp"
+                        android:text="Flash Sales"
+                        android:textColor="#FFC107"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="127dp"
+                        android:fontFamily="@font/noto_sans"
+                        android:paddingTop="30dp"
+                        android:text="More"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/product_more_ic_baseline_navigate_next_24" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-15dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/product_more_ic_baseline_navigate_next_24" />
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/flash_sales_recycler"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

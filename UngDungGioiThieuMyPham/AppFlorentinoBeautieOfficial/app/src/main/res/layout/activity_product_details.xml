@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/main_background">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_prode_trove"
+            android:layout_width="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+        <ImageView
+            android:id="@+id/iv_prode_giohang"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/detail_product_ic_shopping_cart"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="20dp"
+        android:elevation="5dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:background="@color/main_background"
+        >
+
+
+        <ImageView
+            android:id="@+id/iv_prode_image"
+            android:layout_width="315dp"
+            android:layout_height="315dp"
+            android:src="@drawable/img_1" />
+    </LinearLayout>/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/tv_prode_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans"
+            android:padding="10dp"
+            android:text="MATTE CLAY CONCEALER 1.5oz"
+            android:textColor="@color/greendark_bot_nav"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        >
+        <TextView
+            android:id="@+id/tv_prode_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/noto_sans"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="$10.00"
+            android:textColor="@color/coral_pink"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="130dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginBottom="18dp"
+                android:src="@drawable/detail_ic_baseline_favorite_24" />
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="30dp"
+                android:numStars="5"
+                android:progressTint="@color/ratingbar"
+                android:rating="4.5"
+                android:secondaryProgressTint="@color/unselected_item" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="222dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/ratingbar"
+                android:padding="10dp"
+                android:text="Description"
+                android:textColor="@color/main_background"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tv_prode_description"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Introducing a new make-up must-have for blemish - prone skin. Conceal skin imperfections throughout the day with our 100% vegan Matte Clay Concealer. This lightweight concealer is enriched with skin - clearing tea tree and leaves a breathable, yet full-coverage matte finish. " />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="354dp"
+                    android:layout_height="58dp"
+                    android:src="@drawable/detail_product_congtru_bg" />
+
+                <ImageView
+                    android:layout_width="186dp"
+                    android:layout_height="58dp"
+                    android:layout_marginLeft="-185dp"
+                    android:src="@drawable/detail_product_add_to_cart_bg" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="-230dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/detail_product_ic_plus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="-55dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="1"
+                    android:textColor="@color/main_background"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="-50dp"
+                    android:src="@drawable/detail_product_ic_tru" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="58dp"
+                    android:layout_marginLeft="130dp"
+                    android:src="@drawable/detail_product_ic_add_to_cart" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

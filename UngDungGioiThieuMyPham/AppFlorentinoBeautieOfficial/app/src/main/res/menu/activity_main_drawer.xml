@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/drawer_ic_home_heart"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/drawer_ic_about_us"
+            android:title="About Us" />
+    </group>
+
+    <group
+        android:id="@+id/nav_communication_group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/drawer_ic_category_options"
+            android:title="Category" />
+        <item
+            android:id="@+id/nav_flashsale"
+            android:icon="@drawable/drawer_ic_flash_sale"
+            android:title="Flash Sales" />
+        <item
+            android:id="@+id/nav_new_product"
+            android:icon="@drawable/drawer_ic_newproduct_list"
+            android:title="New Products" />
+        <item
+            android:id="@+id/nav_popular_products"
+            android:icon="@drawable/drawer_ic_popularproduct_grid"
+            android:title="Popular Products" />
+    </group>
+
+
+
+
+
+    <group
+        android:id="@+id/nav_communication_group3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_order"
+            android:icon="@drawable/drawer_ic_my_order_listed_items"
+            android:title="My Order" />
+        <item
+            android:id="@+id/nav_my_cart"
+            android:icon="@drawable/drawer_ic_shopping_cart_black_24dp"
+            android:title="My Cart" />
+    </group>
+
+
+</menu>
